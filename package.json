@@ -4,7 +4,7 @@
   "description": "The server works with weather services https://openweathermap.org",
   "main": "index.js",
   "scripts": {
-    "start": "SET NODE_ENV=development && nodemon --exec babel-node src/index.js",
+    "start": "SET NODE_ENV=development && nodemon --inspect --exec babel-node src/index.js",
     "debug": "SET NODE_ENV=development && nodemon --inspect --exec babel-node src/index.js"
   },
   "repository": {
