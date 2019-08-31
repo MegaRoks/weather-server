@@ -1,0 +1,38 @@
+{
+  "name": "weather-server",
+  "version": "1.0.0",
+  "description": "The server works with weather services https://openweathermap.org",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=development && nodemon --exec babel-node src/index.js",
+    "debug": "SET NODE_ENV=development && nodemon --inspect --exec babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MegaRoks/weather-server.git"
+  },
+  "author": "Kamenev Maxim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MegaRoks/weather-server/issues"
+  },
+  "homepage": "https://github.com/MegaRoks/weather-server#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "faker": "github:Marak/faker.js#master",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0"
+  }
+}
