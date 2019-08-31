@@ -8,7 +8,7 @@ const router = express.Router();
 // handles url http://localhost:8081/api/weather/get-current-weather
 router.post('/get-current-weather', async (req, res) => {
     try {
-        const key = process.env.KEY;
+        const key = 'fa205c857a7b86f5273616a0d6f4a1aa';
         const { city, lang = 'en', units = 'metric', lat, lon } = req.body;
         const locality = getLocalityForWeather(city, lat, lon);
         const url = `https://api.openweathermap.org//data/2.5/weather?${locality}&units=${units}&lang=${lang}&appid=${key}`;
@@ -49,3 +49,5 @@ async function getDataAboutWeather(url) {
         });
     });
 };
+
+export { getLocalityForWeather, getDataAboutWeather };

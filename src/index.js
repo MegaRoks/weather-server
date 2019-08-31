@@ -7,7 +7,7 @@ import cors from 'cors';
 
 // 2: Initializations.
 const router = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 8081;
 
 // 3: Parse as urlencoded and json.
 router.use(cors());
