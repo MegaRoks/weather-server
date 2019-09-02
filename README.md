@@ -15,13 +15,13 @@ The server works with weather services https://openweathermap.org
 `units` the default is metric;
 Temperature is available in Fahrenheit, Celsius and Kelvin units.
 
-- For temperature in Fahrenheit use units=imperial;
-- For temperature in Celsius use units=metric;
+- For temperature in Fahrenheit use `units` = `imperial`;
+- For temperature in Celsius use `units` = `metric`;
 - Temperature in Kelvin is used by default, no need to use units parameter in API call;
 
 `lat`, `lon` coordinates of the location of your interest;
 
-`cityName` city name;
+`city` city name;
 
 `lang` the default is English;
 You can use lang parameter to get the output in your language. We support the following languages that you can use with the corresponded lang values: 
