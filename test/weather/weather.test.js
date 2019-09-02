@@ -160,16 +160,9 @@ describe('getLocalityForWeather function', () => {
     });
 });
 
-// describe('getDataAboutWeather function', () => {
-//     it('The request should success', () => {
-//         const link = 'http://ip.jsontest.com';
-//         expect(getDataAboutWeather(link)).to.eql({err});
-//     });
-// });
-
-// describe('getDataAboutWeather function', () => {
-//     it('The request should fail', () => {
-//         const link = 'ip.jsontest.com';
-//         expect(getDataAboutWeather(link)).to.eql('"err": "Error: Invalid URI \"url\""');
-//     });
-// });
+describe('getDataAboutWeather function', () => {
+    it('The request should success', async () => {
+        const link = 'http://ip.jsontest.com';
+        expect(await getDataAboutWeather(link)).to.be.an('object');
+    });
+});
