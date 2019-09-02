@@ -7,7 +7,7 @@
     "start": "SET NODE_ENV=development && nodemon --inspect --exec babel-node src/index.js",
     "debug": "SET NODE_ENV=development && nodemon --inspect --exec babel-node src/index.js",
     "test": "SET NODE_ENV=test && mocha -exit --timeout 10000 --require @babel/register",
-    "runTestForTravis": "nyc --reporter=text --reporter=html mocha -exit --timeout 10000 --require @babel/register test/index.test.js",
+    "runTestForTravis": "nyc --reporter=text --reporter=html mocha -exit --timeout 10000 --coverage --require @babel/register test/index.test.js",
     "alltest": "SET NODE_ENV=test && nyc --reporter=text --reporter=html mocha -exit --timeout 10000 --require @babel/register test/index.test.js"
   },
   "repository": {
