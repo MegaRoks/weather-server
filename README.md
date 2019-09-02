@@ -6,6 +6,6 @@ The server works with weather services https://openweathermap.org
 
 #links
 
-1) Link to the postman;
+1) Link to the postman http://localhost:8081/api/weather/get-current-weather;
 
-2) Link for current weather;
+2) Link for current weather https://weather-server-master.herokuapp.com/api/weather/get-current-weather;
