@@ -4,13 +4,13 @@
 # weather-server
 The server works with weather services https://openweathermap.org
 
-#links
+# links
 
 1) Link to the postman https://www.getpostman.com/collections/100498d3405c3de5de8c;
 
 2) Link for current weather https://weather-server-master.herokuapp.com/api/weather/get-current-weather;
 
-#The server can also accept the following parameters
+# The server can also accept the following parameters
 
 `units` the default is metric;
 Temperature is available in Fahrenheit, Celsius and Kelvin units.
