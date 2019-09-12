@@ -1,3 +1,6 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=79eee5b52b4b9b18459b6e6447b878bb6508dc8ef9065dff21c981688d3eed5e
 language: node_js
 node_js:
   - "8"
@@ -12,6 +15,6 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - npm run testTravis
+  - npm run
 after_script:
   - ./cc-test-reporter after-build
