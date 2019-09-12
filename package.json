@@ -28,6 +28,9 @@
     "@babel/preset-env": "^7.5.5",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "faker": "github:Marak/faker.js#master",
     "mocha": "^6.1.4",
     "nodemon": "^1.18.10"
