@@ -1,5 +1,4 @@
-import { expect } from 'chai';
-import chai from 'chai';
+import chai, { expect } from 'chai';
 import chaiHttp from 'chai-http';
 import faker from 'faker';
 
@@ -10,12 +9,12 @@ chai.use(chaiHttp);
 
 describe('Get current weather by city name', () => {
     describe('POST /api/weather/get-current-weather', () => {
-        it(`Should get the weather by city name`, (done) => {
+        it('Should get the weather by city name', (done) => {
             chai
                 .request(server)
                 .post('/api/weather/get-current-weather')
-                .send({ 'city': 'Omsk' }) // faker.address.city я думал что города из faker должны подойти для API :(
-                .send({ 'lang': faker.random.locale() })
+                .send({ city: 'Omsk' }) // faker.address.city я думал что города из faker должны подойти для API :(
+                .send({ lang: faker.random.locale() })
                 .end((err, res) => {
                     expect(res).have.status(200);
                     expect(res.body).have.property('weatherNow');
@@ -41,13 +40,13 @@ describe('Get current weather by city name', () => {
 
 describe('Get current weather by lat and lon', () => {
     describe('POST /api/weather/get-current-weather', () => {
-        it(`Should get the weather by lat and lon`, (done) => {
+        it('Should get the weather by lat and lon', (done) => {
             chai
                 .request(server)
                 .post('/api/weather/get-current-weather')
-                .send({ 'lat': faker.address.latitude() })
-                .send({ 'lon': faker.address.longitude() })
-                .send({ 'lang': faker.random.locale() })
+                .send({ lat: faker.address.latitude() })
+                .send({ lon: faker.address.longitude() })
+                .send({ lang: faker.random.locale() })
                 .end((err, res) => {
                     expect(res).have.status(200);
                     expect(res.body).have.property('weatherNow');
@@ -73,12 +72,12 @@ describe('Get current weather by lat and lon', () => {
 
 describe('Get the current weather for a nonexistent city', () => {
     describe('POST /api/weather/get-current-weather', () => {
-        it(`Should get an error since the city does not exist`, (done) => {
+        it('Should get an error since the city does not exist', (done) => {
             chai
                 .request(server)
                 .post('/api/weather/get-current-weather')
-                .send({ 'city': faker.address.city() })
-                .send({ 'lang': faker.random.locale() })
+                .send({ city: faker.address.city() })
+                .send({ lang: faker.random.locale() })
                 .end((err, res) => {
                     expect(res).have.status(500);
                     expect(res.body).have.property('err');
@@ -91,13 +90,13 @@ describe('Get the current weather for a nonexistent city', () => {
 
 describe('Get current weather for non-existent coordinates', () => {
     describe('POST /api/weather/get-current-weather', () => {
-        it(`An error should appear, since such coordinates do not exist`, (done) => {
+        it('An error should appear, since such coordinates do not exist', (done) => {
             chai
                 .request(server)
                 .post('/api/weather/get-current-weather')
-                .send({ 'lat': faker.random.number() })
-                .send({ 'lon': faker.random.number() })
-                .send({ 'lang': faker.random.locale() })
+                .send({ lat: faker.random.number() })
+                .send({ lon: faker.random.number() })
+                .send({ lang: faker.random.locale() })
                 .end((err, res) => {
                     expect(res).have.status(500);
                     expect(res.body).have.property('err');
@@ -110,13 +109,13 @@ describe('Get current weather for non-existent coordinates', () => {
 
 describe('Get current weather for non-existent language', () => {
     describe('POST /api/weather/get-current-weather', () => {
-        it(`An error should appear, since such a language does not exist`, (done) => {
+        it('An error should appear, since such a language does not exist', (done) => {
             chai
                 .request(server)
                 .post('/api/weather/get-current-weather')
-                .send({ 'lat': faker.random.number() })
-                .send({ 'lon': faker.random.number() })
-                .send({ 'lang': faker.random.arrayElement() })
+                .send({ lat: faker.random.number() })
+                .send({ lon: faker.random.number() })
+                .send({ lang: faker.random.arrayElement() })
                 .end((err, res) => {
                     expect(res).have.status(500);
                     expect(res.body).have.property('err');
@@ -129,13 +128,13 @@ describe('Get current weather for non-existent language', () => {
 
 
 describe('Get current weather for non-existent language', () => {
-    it(`An error should appear, since such a language does not exist`, (done) => {
+    it('An error should appear, since such a language does not exist', (done) => {
         chai
             .request(server)
             .post('/api/weather/get-current-weather')
-            .send({ 'lat': faker.random.number() })
-            .send({ 'lon': faker.random.number() })
-            .send({ 'lang': faker.random.arrayElement() })
+            .send({ lat: faker.random.number() })
+            .send({ lon: faker.random.number() })
+            .send({ lang: faker.random.arrayElement() })
             .end((err, res) => {
                 expect(res).have.status(500);
                 expect(res.body).have.property('err');

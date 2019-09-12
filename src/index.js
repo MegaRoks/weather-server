@@ -2,8 +2,9 @@
 import express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
-import apiRoutes from './routes/routes';
 import cors from 'cors';
+
+import apiRoutes from './routes/routes';
 
 // 2: Initializations.
 const router = express();
@@ -18,11 +19,9 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(logger('dev'));
 
 // 5: Home route.
-router.get('/', (req, res) => {
-    return res.status(200).json({
-        message: `This is my API for weather`,
-    });
-});
+router.get('/', (req, res) => res.status(200).json({
+    message: 'This is my API for weather',
+}));
 
 // 6: Bundle API routes.
 router.use('/api', apiRoutes);

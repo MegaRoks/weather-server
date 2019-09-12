@@ -10,7 +10,7 @@ class Weather {
         this.description = dataAboutWeather.weather[0].description;
         this.icon = dataAboutWeather.weather[0].icon;
         this.temp = dataAboutWeather.main.temp;
-    };
+    }
 
     getData() {
         const buyerFields = {
@@ -30,8 +30,7 @@ class Weather {
             clouds: this.clouds,
         };
         return buyerFields;
-
-    };
-};
+    }
+}
 
 export default Weather;
