@@ -6,6 +6,7 @@
   "scripts": {
     "start": "SET NODE_ENV=development && nodemon --inspect --exec babel-node src/index.js",
     "serve": "babel-node src/index.js",
+    "lint": "eslint **/*.js",
     "debug": "SET NODE_ENV=development && nodemon --inspect --exec babel-node src/index.js",
     "test": "SET NODE_ENV=test && mocha -exit --timeout 10000 --require @babel/register",
     "testTravis": "nyc --reporter=lcov mocha -exit --timeout 10000 --coverage --require @babel/register test/index.test.js",
