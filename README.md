@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/MegaRoks/weather-server.svg?branch=master)](https://travis-ci.org/MegaRoks/weather-server)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4dfd5d57a3abc0cbf0d8/maintainability)](https://codeclimate.com/github/MegaRoks/weather-server/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4dfd5d57a3abc0cbf0d8/test_coverage)](https://codeclimate.com/github/MegaRoks/weather-server/test_coverage)
+[![Coverage Status](https://coveralls.io/repos/github/MegaRoks/weather-server/badge.svg?branch=master)](https://coveralls.io/github/MegaRoks/weather-server?branch=master)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMegaRoks%2Fweather-server.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FMegaRoks%2Fweather-server?ref=badge_shield)
 # weather-server
 The server works with weather services https://openweathermap.org
