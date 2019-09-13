@@ -65,3 +65,7 @@ You can use lang parameter to get the output in your language. We support the fo
 | Chinese Traditional | zh_tw            |
 
 NOTE: Translation is only applied for the "description" field.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMegaRoks%2Fweather-server.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FMegaRoks%2Fweather-server?ref=badge_large)
